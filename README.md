@@ -205,7 +205,8 @@ Now, when your environment is active, you can run `run_alphafold.py` from any lo
 ### 5. Create an Execution Script: `AF3_run.sh`
 
 Once you have installed AlphaFold 3, you can test your setup using e.g. the following input JSON file named fold_input.json:
-```{
+```
+{
   "name": "2PV7",
   "sequences": [
     {
