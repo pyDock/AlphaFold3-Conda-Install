@@ -31,6 +31,7 @@ conda create -n Alphafold3 python=3.11
 # Activate the environment
 conda activate Alphafold3
 ```
+> **Note:** During installation and execution of AlphaFold 3, the `AlphaFold3 Conda environment` needs to be activated.
 
 ---
 
@@ -53,7 +54,7 @@ conda install -c conda-forge git zlib
 
 # Install HMMER
 conda config --add channels bioconda
-conda install hmmer
+conda install -c bioconda hmmer
 
 # Install and Upgrade pip within the Alphafold3 environment
 conda install pip
@@ -126,8 +127,8 @@ chmod +x fetch_databases.sh
 
 You need to request access to the AlphaFold 3 model parameters:
 
-1. Complete the official request form provided by the AlphaFold team. 
-3. To request access to the AlphaFold 3 model parameters, please complete this [form](https://forms.gle/svvpY4u2jsHEwWYS6). Access will be granted at Google DeepMind’s sole discretion. They aim to respond to requests within 2–3 business days. You may only use AlphaFold 3 model parameters if received directly from Google. Use is subject to these terms of use.
+1. Complete the official request [form](https://forms.gle/svvpY4u2jsHEwWYS6) provided by the AlphaFold team. 
+3. Access will be granted at Google DeepMind’s sole discretion. They aim to respond to requests within 2–3 business days. You may only use AlphaFold 3 model parameters if received directly from Google. Use is subject to these terms of use.
 2. Once approved, you will receive a download link for `af3.bin.zst`.
 
 Proceed to decompress and move the model files:
