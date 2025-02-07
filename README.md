@@ -1,4 +1,4 @@
-# Comprehensive Guide to Installing and Configuring AlphaFold 3 Using Conda and Python 3.11
+# Comprehensive Guide to Installing and Configuring AlphaFold 3 Using Conda Python 3.11 Environment
 
 This guide details the necessary steps to install and configure AlphaFold 3 using a conda Python 3.11 environment. It includes the installation of Miniconda, environment creation, dependency installation, repository cloning, model configuration, and the preparation of an execution script. **It has been designed to rely solely on conda, without the need for installing any additional packages on the operating system, making it possible to perform this installation on any operating system that supports conda.**
 
