@@ -208,7 +208,7 @@ Now, when your environment is active, you can run `run_alphafold.py` from any lo
 
 ### 5. Create an Execution Script: `AF3_run.sh`
 
-Once you have installed AlphaFold 3, you can test your setup using e.g. the following input JSON file named fold_input.json:
+Once you have installed AlphaFold 3, go to your working directory and test the AlphaFold 3 run using, for example, the following input JSON file named `fold_input.json`:
 ```
 {
   "name": "2PV7",
@@ -266,14 +266,16 @@ Now, with your conda environment active and in the appropriate working directory
 ```bash
 ./AF3_run.sh
 ```
-
----
-
 ## Additional Notes
+- **Use the `AF3_run.sh`** script anywhere on the system.
 
-- **Hardware Requirements:** Ensure that you have a compatible GPU and sufficient memory to efficiently run AlphaFold 3.
+    ```
+        cp AF3_run.sh ${CONDA_PREFIX}/bin/
+        chmod +x ${CONDA_PREFIX}/bin/AF3_run.sh
+    ```
+- **Hardware Requirements:** To run AlphaFold 3 on systems with limited resources, a minimum of an Amper NVIDIA GPU with 8 o 12 GB of VRAM. However, for optimal performance, it's recommended to use professional GPUs like the NVIDIA A100, H100 or high-end consumer GPUs such as the RTX 3090, 4090, or the latest 5090, as these offer superior memory and processing capabilities that significantly enhance the efficiency of running AlphaFold 3.
 - **CUDA and NVIDIA Drivers:** Verify that you have the correct versions of CUDA and NVIDIA drivers that match the installed `nvidia` packages.
-- **Disk Space:** The databases and models require significant disk space. Make sure you have at least 100 GB of free space.
-- **Updates and Support:** Regularly check the official AlphaFold 3 repository for updates and potential changes to dependencies.
+- **Disk Space:** The databases (627 GB), the models (2.1 GB), and the Conda environment (6.7 GB) require significant disk space. Make sure you have at least **800 GB of free space.**  
+- **Updates and Support:** Regularly check the official [AlphaFold 3 repository](https://github.com/google-deepmind/alphafold3)for updates and potential changes to dependencies.
 
 If you encounter any issues during the installation or execution process, feel free to ask for additional assistance.
