@@ -279,3 +279,5 @@ Now, with your conda environment active and in the appropriate working directory
 - **Updates and Support:** Regularly check the official [AlphaFold 3 repository](https://github.com/google-deepmind/alphafold3) for updates and potential changes to dependencies.
 
 If you encounter any issues during the installation or execution process, feel free to ask for additional assistance.
+## **Acknowledgment:**  
+> This work was inspired by the [Alphafold3-Fedora-install](https://github.com/ullahsamee/Alphafold3-Fedora-install) repository by [ullahsamee](https://github.com/ullahsamee/Alphafold3-Fedora-install/commits?author=ullahsamee), originally developed for Fedora. We have adapted it to enhance its general applicability.  
