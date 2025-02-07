@@ -37,7 +37,7 @@ conda activate Alphafold3
 
 ## 2. Install Development Tools and Dependencies
 
-Install the necessary development tools and dependencies within the conda environment (not on the system OS):
+Install the necessary development tools and dependencies within the conda environment, not on the system OS. Note that HMMER is installed using conda and does not require independent installation or compilation, although there may be tools that cannot be installed in this way.
 
 ```bash
 # Install cmake, gcc, and gxx
@@ -51,6 +51,10 @@ conda install -c conda-forge bzip2 zstd
 
 # Install git and zlib
 conda install -c conda-forge git zlib
+
+# Install HMMER
+conda config --add channels bioconda
+conda install hmmer
 
 # Install and Upgrade pip within the Alphafold3 environment
 conda install pip
@@ -229,8 +233,8 @@ Create a script called `AF3_run.sh` with the following content to facilitate run
 
 APPDIR="/home/user/Programs"  # Replace with your actual path if different
 ALPHAFOLD3DIR="$APPDIR/alphafold3"
-# Path to HMMER binaries (installed via OS package manager or specify your path)
-HMMER3_BINDIR="/usr/bin"
+#HMMER3_BINDIR="/usr/bin" # Path to HMMER binaries (**installed via OS package manager or specify your path**)
+HMMER3_BINDIR="${CONDA_PREFIX}/bin/" # Path to Conda binarys (**installed via conda**)
 DB_DIR="${ALPHAFOLD3DIR}/public_databases"
 MODEL_DIR="${ALPHAFOLD3DIR}/models"
 WORK_DIR=$(pwd)
