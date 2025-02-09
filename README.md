@@ -254,7 +254,8 @@ run_alphafold.py \
     --model_dir="${MODEL_DIR}" \
     --json_path="${WORK_DIR}/${JSON_FILE}" \
     --output_dir="${OUTPUT_DIR}" \
-    --buckets="256,512,768,1024,1280,1536,2048,2560,3072,3584,4096,4608,5120" |& tee -a "$LOG_FILE"
+    --buckets="256,512,768,1024,1280,1536,2048,2560,3072,3584,4096,4608,5120" \
+    2>&1 | tee -a "${LOG_FILE}"
 ```
 > **Important:** Use `set` in C shell (csh/tcsh) to initialize APPDIR, ALPHAFOLD3DIR,HMMER3_BINDIR, DB_DIR, MODEL_DIR, WORK_DIR, OUTPUT_DIR and LOG_FILE JSON_FILE.
 e.g.
