@@ -14,7 +14,6 @@ fi
 
 # Make sure required environment variables are set.
 : "${CONDA_PREFIX:?CONDA_PREFIX is not set. Please activate your Conda environment.}"
-: "${BASE_NAME:?BASE_NAME is not set. Please define BASE_NAME (e.g. export BASE_NAME=my_run)}"
 
 # -------------------------------
 # Define variables
@@ -25,7 +24,7 @@ HMMER3_BINDIR="${CONDA_PREFIX}/bin"    # No trailing slash needed
 DB_DIR="${ALPHAFOLD3DIR}/public_databases"
 MODEL_DIR="${ALPHAFOLD3DIR}/models"
 WORK_DIR="$(pwd)"
-OUTPUT_DIR="${WORK_DIR}/output/${BASE_NAME}"
+OUTPUT_DIR="${WORK_DIR}/output/"
 LOG_FILE="${OUTPUT_DIR}/af3_run.log"
 
 # Create the output directory if it does not exist.
