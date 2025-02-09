@@ -122,7 +122,8 @@ chmod +x fetch_databases.sh
 ./fetch_databases.sh
 ```
 
-> **Important:** Ensure you have sufficient disk space as the databases are quite large.
+> **Important:** Ensure you have sufficient disk space, as the databases are quite large (~627GB).  
+> If you use C shell (csh/tcsh), run the `fetch_databases.csh` script included in the repository.
 
 ### 4.3 Obtain Model Parameters and Place Them in `models`
 
