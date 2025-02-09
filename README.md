@@ -68,7 +68,7 @@ pip install --upgrade pip  # Update pip (specific to the AF3 environment)
 Install the necessary Python packages using pip:
 
 ```bash
-pip install pandas matplotlib absl-py==2.1.0 chex==0.1.87 \
+pip install pandas==2.2.3 matplotlib==3.10.0 absl-py==2.1.0 chex==0.1.87 \
     dm-haiku==0.0.13 dm-tree==0.1.8 filelock==3.16.1 \
     "jax[cuda12]==0.4.34" jax-cuda12-pjrt==0.4.34 jax-triton==0.2.0 \
     jaxlib==0.4.34 jaxtyping==0.2.34 jmp==0.0.4 ml-dtypes==0.5.0 \
