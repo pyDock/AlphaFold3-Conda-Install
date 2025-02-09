@@ -7,7 +7,7 @@ onintr exit
 if ($#argv >= 1) then
   set db_dir = "$1"
 else
-  set db_dir = "$AF3_DB/public_databases"
+  set db_dir = "$HOME/public_databases"
 endif
 
 # Verificar que wget, tar y zstd están instalados
