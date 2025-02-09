@@ -15,11 +15,6 @@ if ( ! $?CONDA_PREFIX ) then
     exit 1
 endif
 
-if ( ! $?BASE_NAME ) then
-    echo "Error: BASE_NAME is not set. Please define BASE_NAME (e.g., setenv BASE_NAME my_run)."
-    exit 1
-endif
-
 # -------------------------------
 # Define variables
 # -------------------------------
@@ -29,7 +24,7 @@ set HMMER3_BINDIR = "$CONDA_PREFIX/bin"       # No trailing slash needed
 set DB_DIR = "$ALPHAFOLD3DIR/public_databases"
 set MODEL_DIR = "$ALPHAFOLD3DIR/models"
 set WORK_DIR = `pwd`
-set OUTPUT_DIR = "$WORK_DIR/output/$BASE_NAME"
+set OUTPUT_DIR = "$WORK_DIR/output/"
 set LOG_FILE = "$OUTPUT_DIR/af3_run.log"
 
 # Create the output directory if it doesn't exist.
