@@ -92,7 +92,7 @@ Define your desired installation location and clone the official repository:
 
 ```bash
 # Set the desired application directory
-APPDIR="/home/user/Programs"  # Replace "/home/user/Programs" with your desired path
+export APPDIR="/home/user/Programs"  # Replace "/home/user/Programs" with your desired path
 
 # Create the directory and navigate to it
 mkdir -p $APPDIR
@@ -102,9 +102,10 @@ cd $APPDIR
 git clone https://github.com/google-deepmind/alphafold3.git
 
 # Define the AlphaFold 3 directory variable
-ALPHAFOLD3DIR="$APPDIR/alphafold3"
+export ALPHAFOLD3DIR="$APPDIR/alphafold3"
 cd ${ALPHAFOLD3DIR}
 ```
+> **Important:** Use `setenv` instead of export in C shell (csh/tcsh)
 
 ### 4.2 Download the Databases
 
@@ -254,6 +255,9 @@ run_alphafold.py \
     --output_dir="${OUTPUT_DIR}" \
     --buckets="256,512,768,1024,1280,1536,2048,2560,3072,3584,4096,4608,5120"
 ```
+> **Important:** Use `set` in C shell (csh/tcsh) to initialize APPDIR, ALPHAFOLD3DIR,HMMER3_BINDIR, DB_DIR, MODEL_DIR, WORK_DIR, OUTPUT_DIR and LOG_FILE JSON_FILE.
+e.g.
+```set APPDIR="/home/user/Programs"```
 
 Make the script executable:
 
