@@ -287,7 +287,7 @@ Aquí tienes todo en Markdown correctamente formateado:
   Verify that you have the correct versions of CUDA and NVIDIA drivers that match the installed `nvidia` packages.  
   It is recommended to install the latest graphics card driver, particularly the one provided by each distribution, especially when installing on Linux.
 
-  #### For instance, in Debian:
+  #### For instance, in Debian-like distributions:
   ```bash
   sudo apt-get install nvidia-driver-565
   sudo reboot
