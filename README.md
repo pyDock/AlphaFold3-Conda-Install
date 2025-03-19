@@ -281,7 +281,6 @@ Now, with your conda environment active and in the appropriate working directory
         chmod +x ${CONDA_PREFIX}/bin/AF3_run.sh
     ```
 - **Hardware Requirements:** To run AlphaFold 3 on systems with limited resources, a minimum of an Amper NVIDIA GPU with 8 o 12 GB of VRAM. However, for optimal performance, it's recommended to use professional GPUs like the NVIDIA A100, H100 or high-end consumer GPUs such as the RTX 3090, 4090, or the latest 5090, as these offer superior memory and processing capabilities that significantly enhance the efficiency of running AlphaFold 3.
-Aquí tienes todo en Markdown correctamente formateado:
 
 - **CUDA and NVIDIA Drivers:**  
   Verify that you have the correct versions of CUDA and NVIDIA drivers that match the installed `nvidia` packages.  
