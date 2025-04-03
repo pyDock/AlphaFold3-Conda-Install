@@ -1,5 +1,5 @@
 # Comprehensive Guide to Installing and Configuring AlphaFold 3 Using Conda Python 3.11 Environment
-This guide details the necessary steps to install and configure AlphaFold 3 using a conda Python 3.11 environment. It includes the installation of Miniconda, environment creation, dependency installation, repository cloning, model configuration, and the preparation of an execution script. **It has been designed to rely solely on conda, without the need for installing any additional packages on the operating system, making it possible to perform this installation on any operating system that supports conda.**  It is assumed that the appropriate graphics drivers for your Linux distribution are correctly installed. For detailed instructions, please refer to the [mini-tutorial](#for-instance-in-debian-like-distributions).
+This guide details the necessary steps to install and configure AlphaFold 3 using a conda Python 3.11 environment. It includes the installation of Miniconda, environment creation, dependency installation, repository cloning, model configuration, and the preparation of an execution script. **It has been designed to rely solely on conda, without the need for installing any additional packages on the operating system, making it possible to perform this installation on any operating system that supports conda.**  It is assumed that the appropriate graphics drivers for your Linux distribution are correctly installed. For detailed instructions, please refer to the [mini-tutorial](#cuda-and-nvidia-drivers).
 
 ## 0. Install Miniconda
 
@@ -282,7 +282,7 @@ Now, with your conda environment active and in the appropriate working directory
     ```
 - **Hardware Requirements:** To run AlphaFold 3 on systems with limited resources, a minimum of an Amper NVIDIA GPU with 8 o 12 GB of VRAM. However, for optimal performance, it's recommended to use professional GPUs like the NVIDIA A100, H100 or high-end consumer GPUs such as the RTX 3090, 4090, or the latest 5090, as these offer superior memory and processing capabilities that significantly enhance the efficiency of running AlphaFold 3.
 
-- **CUDA and NVIDIA Drivers:**  
+### CUDA and NVIDIA Drivers:  
   Verify that you have the correct versions of CUDA and NVIDIA drivers that match the installed `nvidia` packages.  
   It is recommended to install the latest graphics card driver, particularly the one provided by each distribution, especially when installing on Linux.
 
