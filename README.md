@@ -282,7 +282,7 @@ Now, with your conda environment active and in the appropriate working directory
     ```
 - **Hardware Requirements:** To run AlphaFold 3 on systems with limited resources, a minimum of an Amper NVIDIA GPU with 8 o 12 GB of VRAM. However, for optimal performance, it's recommended to use professional GPUs like the NVIDIA A100, H100 or high-end consumer GPUs such as the RTX 3090, 4090, or the latest 5090, as these offer superior memory and processing capabilities that significantly enhance the efficiency of running AlphaFold 3.
 
-### CUDA and NVIDIA Drivers:  
+### CUDA and NVIDIA Drivers
   Verify that you have the correct versions of CUDA and NVIDIA drivers that match the installed `nvidia` packages.  
   It is recommended to install the latest graphics card driver, particularly the one provided by each distribution, especially when installing on Linux.
 
@@ -299,6 +299,7 @@ Now, with your conda environment active and in the appropriate working directory
   sudo yum install nvidia-driver-565
   sudo reboot
   ```
+### Other Considerations
 - **Disk Space:** The databases (627 GB), the models (1.1 GB), and the Conda environment (6.7 GB) require significant disk space. Make sure you have at least **700 GB of free space** available. For optimal performance, a dedicated **1 TB NVMe drive** is recommended.
 - **Updates and Support:** Regularly check the official [AlphaFold 3 repository](https://github.com/google-deepmind/alphafold3) for updates and potential changes to dependencies.
 
