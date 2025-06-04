@@ -305,4 +305,4 @@ Now, with your conda environment active and in the appropriate working directory
 
 If you encounter any issues during the installation or execution process, feel free to ask for additional assistance.
 ## **Acknowledgment:**  
-> This work was inspired by the [Alphafold3-Fedora-install](https://github.com/ullahsamee/Alphafold3-Fedora-install) repository by [ullahsamee](https://github.com/ullahsamee/Alphafold3-Fedora-install/commits?author=ullahsamee), originally developed for Fedora. We have adapted it to enhance its general applicability.  
+> This work was depeloped by [Hiiragizawa](https://github.com/Hiiragizawa) and inspired by the [Alphafold3-Fedora-install](https://github.com/ullahsamee/Alphafold3-Fedora-install) repository by [ullahsamee](https://github.com/ullahsamee/Alphafold3-Fedora-install/commits?author=ullahsamee), originally developed for Fedora. We have adapted it to enhance its general applicability.  
