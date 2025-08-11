@@ -43,22 +43,6 @@ conda activate Alphafold3
 > **Note:** During installation and execution of AlphaFold 3, the `AlphaFold3` Conda environment needs to be activated.  
 > **Why?** Setting `PYTHONUSERBASE=intentionally-disabled` tells pip and Python to ignore `~/.local` entirely, ensuring all packages come only from the Conda environment. 
 > This prevents interference from globally or user-installed Python packages, keeping the environment reproducible and self-contained.
-## 1. Create a Conda Environment with Python 3.11
-
-Create and activate a new conda environment named `Alphafold3` with Python 3.11:
-
-```bash
-# Create the environment
-conda create -n Alphafold3 python=3.11
-
-# Activate the environment
-conda activate Alphafold3
-conda env config vars set PYTHONUSERBASE=intentionally-disabled
-conda deactivate
-conda activate Alphafold3
-```
-> **Note:** During installation and execution of AlphaFold 3, the `AlphaFold3 Conda environment` needs to be activated.
-
 ---
 
 ## 2. Install Development Tools and Dependencies
