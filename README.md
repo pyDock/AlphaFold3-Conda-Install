@@ -54,20 +54,20 @@ Install the necessary development tools and dependencies within the conda enviro
 conda install -c conda-forge cmake gcc gxx
 
 # Install Boost for Python 3.11 and numpy
-conda install -c conda-forge boost boost-cpp numpy  # Boost for Python 3.11
+conda install -c conda-forge boost boost-cpp numpy -y # Boost for Python 3.11
 
 # Install compression libraries
-conda install -c conda-forge bzip2 zstd
+conda install -c conda-forge bzip2 zstd -y
 
 # Install git and zlib
-conda install -c conda-forge git zlib
+conda install -c conda-forge git zlib -y
 
 # Install HMMER
-conda config --add channels bioconda
-conda install -c bioconda hmmer
+conda config --add channels bioconda 
+conda install -c conda-forge hmmer gsl=2.6 -y
 
 # Install and Upgrade pip within the Alphafold3 environment
-conda install pip
+conda install pip -y
 pip install --upgrade pip  # Update pip (specific to the AF3 environment)
 ```
 
@@ -214,9 +214,20 @@ Create a symbolic link to the script in your conda environment's `bin` directory
 ```bash
 ln -s ${PWD}/run_alphafold.py ${CONDA_PREFIX}/bin/run_alphafold.py
 ```
+Got it ✅ — here’s a clean note in the style you want:
 
-Now, when your environment is active, you can run `run_alphafold.py` from any location.
+### 4.8 Fix JAX JNP modules (optional)
 
+If a segmentation fault occurs when initializing `pjrt_plugin`, it may be due to **import order conflicts** between JAX and other C++/CUDA extensions (e.g. `alphafold3.cpp`, SciPy, RDKit).
+A simple workaround is to ensure `jax` and `jnp` are imported **before any other modules**.
+
+This command moves the imports to the top (before `from collections.abc ...`) and removes duplicate occurrences later in the file:
+
+```bash
+sed -i"bk2" -e 's|from collections\.abc import Callable, Sequence|import jax\nfrom jax import numpy as jnp\n\nfrom collections.abc import Callable, Sequence|' \
+   -e '/^import jax$/d' \
+   -e '/^from jax import numpy as jnp$/d' ${PWD}/run_alphafold.py
+```
 ---
 
 ### 5. Create an Execution Script: `AF3_run.sh`
