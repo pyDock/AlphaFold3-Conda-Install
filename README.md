@@ -224,7 +224,7 @@ A simple workaround is to ensure `jax` and `jnp` are imported **before any other
 This command moves the imports to the top (before `from collections.abc ...`) and removes duplicate occurrences later in the file:
 
 ```bash
-sed -i"bk2" -e 's|from collections\.abc import Callable, Sequence|import jax\nfrom jax import numpy as jnp\n\nfrom collections.abc import Callable, Sequence|' \
+sed -i".bk" -e 's|from collections\.abc import Callable, Sequence|import jax\nfrom jax import numpy as jnp\n\nfrom collections.abc import Callable, Sequence|' \
    -e '/^import jax$/d' \
    -e '/^from jax import numpy as jnp$/d' ${PWD}/run_alphafold.py
 ```
