@@ -214,8 +214,6 @@ Create a symbolic link to the script in your conda environment's `bin` directory
 ```bash
 ln -s ${PWD}/run_alphafold.py ${CONDA_PREFIX}/bin/run_alphafold.py
 ```
-Got it ✅ — here’s a clean note in the style you want:
-
 ### 4.8 Fix JAX JNP modules (optional)
 
 If a segmentation fault occurs when initializing `pjrt_plugin`, it may be due to **import order conflicts** between JAX and other C++/CUDA extensions (e.g. `alphafold3.cpp`, SciPy, RDKit).
